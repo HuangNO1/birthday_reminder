@@ -86,7 +86,7 @@
             <b-input v-model="newTask.username"></b-input>
           </b-field>
           <!-- birthday_time -->
-          <b-field label="对方生日日期">
+          <b-field label="对方生日日期，格式：月-日（例3-1 是3月1日）">
             <b-input v-model="newTask.birthday_time"></b-input>
           </b-field>
           <!-- hour -->
@@ -232,6 +232,10 @@ export default {
       data.append("minute", this.newTask.minute);
       data.append("to_user", this.newTask.to_user);
       data.append("email", this.newTask.email);
+
+      // 做空值判断处理
+
+
       axios
         .post(this.baseURL + this.taskAddURL, data, {
           headers: { "Content-Type": "form-data" },
