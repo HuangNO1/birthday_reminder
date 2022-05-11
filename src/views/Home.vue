@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p class="title is-1">Birthday Reminder</p>
+    <p class="title is-1">农历生日提醒</p>
     <div class="birthday-card">
       <div class="panel">
         <p class="panel-heading">任务列表</p>
@@ -86,23 +86,23 @@
             <b-input v-model="newTask.username"></b-input>
           </b-field>
           <!-- birthday_time -->
-          <b-field label="生日日期">
+          <b-field label="对方生日日期">
             <b-input v-model="newTask.birthday_time"></b-input>
           </b-field>
           <!-- hour -->
-          <b-field label="小时">
+          <b-field label="当日提醒时间---小时">
             <b-input v-model="newTask.hour"></b-input>
           </b-field>
           <!-- minute -->
-          <b-field label="分钟">
+          <b-field label="当日提醒时间---分钟">
             <b-input v-model="newTask.minute"></b-input>
           </b-field>
           <!-- to_user -->
-          <b-field label="传送用户">
+          <b-field label="需要被提醒人的名字">
             <b-input v-model="newTask.to_user"></b-input>
           </b-field>
           <!-- email -->
-          <b-field label="传送用户E-mail">
+          <b-field label="你的E-mail">
             <b-input v-model="newTask.email"></b-input>
           </b-field>
 
