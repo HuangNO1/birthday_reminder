@@ -234,7 +234,20 @@ export default {
       data.append("email", this.newTask.email);
 
       // 做空值判断处理
-
+      if( this.newTask.username &&
+          this.newTask.birthday_time &&
+          this.newTask.hour &&
+          this.newTask.minute &&
+          this.newTask.to_user &&
+          this.newTask.email
+      ){
+      }else{
+          this.$buefy.toast.open({
+            message: "信息中含有非法值",
+            type: "is-danger",
+          });
+          return;
+      }
 
       axios
         .post(this.baseURL + this.taskAddURL, data, {
